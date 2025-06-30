@@ -163,7 +163,7 @@ const OnboardingForm = ({ industries }) => {
                 type="number"
                 min="0"
                 max="50"
-                placeholder="Enter years off experience"
+                placeholder="Enter years of experience"
                 {...register("experience")}
               ></Input>
 

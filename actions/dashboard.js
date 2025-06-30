@@ -20,7 +20,7 @@ export const generateAIInsights = async (industry) => {
     "growthRate": number,
     "demandLevel": "HIGH" | "MEDIUM" | "LOW",
     "topSkills": ["skill1", "skill2"],
-    "marketOutlook": "[POSITIVE]" | "NEUTAL" | "NEGATIVE",
+    "marketOutlook": "POSITIVE" | "NEUTAL" | "NEGATIVE",
     "keyTrends": ["trend1", "trend2"],
     "recommendedSkills": ["skill1", "skill2"]
   }
