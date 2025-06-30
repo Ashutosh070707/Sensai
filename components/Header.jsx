@@ -1,6 +1,12 @@
 "use client";
 
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+  useUser,
+} from "@clerk/nextjs";
 import {
   ChevronDown,
   FileText,
@@ -18,8 +24,29 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const { isLoaded, user } = useUser();
+  const [hasCheckedUser, setHasCheckedUser] = useState(false);
+
+  useEffect(() => {
+    const checkUser = async () => {
+      try {
+        await fetch("/api/check-user", {
+          method: "POST",
+        });
+        setHasCheckedUser(true);
+      } catch (error) {
+        console.error("Error checking user:", error);
+      }
+    };
+
+    if (isLoaded && user && !hasCheckedUser) {
+      checkUser();
+    }
+  }, [isLoaded, user, hasCheckedUser]);
+
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto px-4 h-16 flex items-center justify-between ">
