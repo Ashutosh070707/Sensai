@@ -23,7 +23,7 @@ export default function Home() {
       <HeroSection />
 
       <section className="w-full py=12 md:py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 py-14 md:py-0 ">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             Powerfull features for your Career Growth
           </h2>
@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       <section className="w-full py=12 md:py-24 bg-muted/50">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 py-14 md:py-0">
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">50+</h3>
@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       <section className="w-full py=12 md:py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-0 md:px-6 py-14 md:py-0">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">How It Works</h2>
             <p className="text-muted-foreground">
@@ -103,11 +103,11 @@ export default function Home() {
       </section>
 
       <section className="w-full py=12 md:py-24 lg:py-32 bg-muted/50">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-0 md:px-6 py-14 md:py-0">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             What Our Users Say
           </h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 l gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 l gap-8 max-w-6xl mx-auto">
             {testimonial.map((testimonial, index) => {
               return (
                 <Card
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       <section className="w-full py=12 md:py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6 py-14 md:py-0">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Frequently Asked Questions
@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       <section className="w-full">
-        <div className="container py-24 gradient roundex-lg">
+        <div className=" py-24 gradient roundex-lg ">
           <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter text-primary-foreground sm:text-4xl md:text-5xl">
               Ready to accelerate your career?
